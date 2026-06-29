@@ -1,0 +1,10 @@
+{
+  "templateId": "blank",
+  "title": "Blank canvas",
+  "description": "Open workspace without predefined sections.",
+  "canvas": {
+    "width": 1400,
+    "height": 900
+  },
+  "sections": []
+}

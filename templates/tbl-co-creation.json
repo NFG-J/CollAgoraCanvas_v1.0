@@ -1,0 +1,83 @@
+{
+  "templateId": "tbl-co-creation",
+  "title": "Triple Bottom Line Co-creation Canvas",
+  "description": "Educational canvas for sustainable co-creation and ecosystem learning.",
+  "canvas": {
+    "width": 1800,
+    "height": 1200
+  },
+  "sections": [
+    {
+      "id": "participants",
+      "title": "Participants / ecosystem actors",
+      "x": 20,
+      "y": 20,
+      "width": 430,
+      "height": 260
+    },
+    {
+      "id": "shared-challenge",
+      "title": "Shared challenge",
+      "x": 470,
+      "y": 20,
+      "width": 430,
+      "height": 260
+    },
+    {
+      "id": "value-proposal",
+      "title": "Co-created value proposal",
+      "x": 920,
+      "y": 20,
+      "width": 430,
+      "height": 260
+    },
+    {
+      "id": "governance",
+      "title": "Governance and responsibilities",
+      "x": 1370,
+      "y": 20,
+      "width": 410,
+      "height": 260
+    },
+    {
+      "id": "people",
+      "title": "People / social effects",
+      "x": 20,
+      "y": 310,
+      "width": 570,
+      "height": 300
+    },
+    {
+      "id": "planet",
+      "title": "Planet / environmental effects",
+      "x": 615,
+      "y": 310,
+      "width": 570,
+      "height": 300
+    },
+    {
+      "id": "profit",
+      "title": "Profit / viability effects",
+      "x": 1210,
+      "y": 310,
+      "width": 570,
+      "height": 300
+    },
+    {
+      "id": "experiments",
+      "title": "Experiments and learning",
+      "x": 20,
+      "y": 640,
+      "width": 860,
+      "height": 300
+    },
+    {
+      "id": "evidence",
+      "title": "Evidence, metrics and next steps",
+      "x": 920,
+      "y": 640,
+      "width": 860,
+      "height": 300
+    }
+  ]
+}

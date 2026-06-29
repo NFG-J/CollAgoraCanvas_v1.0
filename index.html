@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollAgora Canvas v1.0</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Local-first educational canvas</p>
+      <h1>CollAgora Canvas</h1>
+      <p class="lead">Create structured canvases with sticky notes, votes, media, save/load and exports.</p>
+    </div>
+    <div class="project-fields" aria-label="Project settings">
+      <label>
+        Project title
+        <input id="projectTitle" type="text" value="Untitled CollAgora Canvas" />
+      </label>
+      <label>
+        Template
+        <select id="templateSelect"></select>
+      </label>
+      <label>
+        Canvas size
+        <select id="canvasSize">
+          <option value="1400x900">Medium 1400 x 900</option>
+          <option value="1800x1100">Large 1800 x 1100</option>
+          <option value="2400x1400">Workshop 2400 x 1400</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="toolbar" aria-label="Canvas toolbar">
+      <section>
+        <h2>Add</h2>
+        <button id="addNoteBtn" type="button">Sticky note</button>
+        <button id="addLinkBtn" type="button">Link / video card</button>
+        <label class="file-button" for="imageUpload">Image</label>
+        <input id="imageUpload" type="file" accept="image/*" />
+      </section>
+
+      <section>
+        <h2>Project</h2>
+        <button id="saveLocalBtn" type="button">Save locally</button>
+        <button id="loadLocalBtn" type="button">Load local</button>
+        <button id="clearCanvasBtn" type="button" class="secondary">Clear items</button>
+      </section>
+
+      <section>
+        <h2>Import / export</h2>
+        <button id="exportJsonBtn" type="button">Export JSON</button>
+        <label class="file-button" for="importJsonInput">Import JSON</label>
+        <input id="importJsonInput" type="file" accept="application/json,.json" />
+        <button id="exportMarkdownBtn" type="button">Export Markdown</button>
+        <button id="exportPngBtn" type="button">Export PNG</button>
+      </section>
+
+      <section>
+        <h2>Selected item</h2>
+        <p id="selectedInfo" class="muted">No item selected.</p>
+        <label>
+          Vote score
+          <input id="voteInput" type="number" min="1" max="5" value="3" />
+        </label>
+        <label>
+          Colour
+          <input id="colorInput" type="color" value="#fff7a8" />
+        </label>
+        <button id="duplicateItemBtn" type="button">Duplicate</button>
+        <button id="deleteItemBtn" type="button" class="danger">Delete</button>
+      </section>
+
+      <section>
+        <h2>Template studio</h2>
+        <p class="muted">Simple v1.0 JSON template editor.</p>
+        <button id="addSectionBtn" type="button">Add section</button>
+        <button id="exportTemplateBtn" type="button">Export template</button>
+      </section>
+    </aside>
+
+    <section class="workspace" aria-label="Canvas workspace">
+      <div class="workspace-help">
+        <span>Tip: Drag notes and cards. Double-click a note to edit it. Use JSON export to continue work in AI or development tools.</span>
+      </div>
+      <div id="canvasViewport" class="canvas-viewport">
+        <div id="canvas" class="canvas" tabindex="0" aria-label="Editable canvas"></div>
+      </div>
+    </section>
+  </main>
+
+  <template id="noteTemplate">
+    <article class="canvas-item sticky-note" tabindex="0">
+      <div class="item-actions" aria-label="Item controls">
+        <span class="item-score" title="Vote score">3</span>
+      </div>
+      <div class="item-content" contenteditable="true"></div>
+    </article>
+  </template>
+
+  <template id="cardTemplate">
+    <article class="canvas-item link-card" tabindex="0">
+      <div class="item-actions" aria-label="Item controls">
+        <span class="item-score" title="Vote score">3</span>
+      </div>
+      <a class="item-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+      <p class="item-alt"></p>
+    </article>
+  </template>
+</body>
+</html>

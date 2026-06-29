@@ -1,0 +1,83 @@
+{
+  "templateId": "business-model-canvas",
+  "title": "Business Model Canvas",
+  "description": "Nine-section business-model structure inspired by Osterwalder.",
+  "canvas": {
+    "width": 1800,
+    "height": 1100
+  },
+  "sections": [
+    {
+      "id": "key-partners",
+      "title": "Key partners",
+      "x": 20,
+      "y": 20,
+      "width": 330,
+      "height": 520
+    },
+    {
+      "id": "key-activities",
+      "title": "Key activities",
+      "x": 370,
+      "y": 20,
+      "width": 330,
+      "height": 250
+    },
+    {
+      "id": "key-resources",
+      "title": "Key resources",
+      "x": 370,
+      "y": 290,
+      "width": 330,
+      "height": 250
+    },
+    {
+      "id": "value-propositions",
+      "title": "Value propositions",
+      "x": 720,
+      "y": 20,
+      "width": 360,
+      "height": 520
+    },
+    {
+      "id": "customer-relationships",
+      "title": "Customer relationships",
+      "x": 1100,
+      "y": 20,
+      "width": 330,
+      "height": 250
+    },
+    {
+      "id": "channels",
+      "title": "Channels",
+      "x": 1100,
+      "y": 290,
+      "width": 330,
+      "height": 250
+    },
+    {
+      "id": "customer-segments",
+      "title": "Customer segments",
+      "x": 1450,
+      "y": 20,
+      "width": 330,
+      "height": 520
+    },
+    {
+      "id": "cost-structure",
+      "title": "Cost structure",
+      "x": 20,
+      "y": 570,
+      "width": 860,
+      "height": 250
+    },
+    {
+      "id": "revenue-streams",
+      "title": "Revenue streams",
+      "x": 920,
+      "y": 570,
+      "width": 860,
+      "height": 250
+    }
+  ]
+}

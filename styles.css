@@ -1,0 +1,188 @@
+:root {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #64748b;
+  --border: #d5d9e2;
+  --accent: #1d4ed8;
+  --danger: #b91c1c;
+  --section: rgba(29, 78, 216, 0.06);
+  --section-border: rgba(29, 78, 216, 0.28);
+  --note: #fff7a8;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button, input, select, textarea { font: inherit; }
+
+.app-header {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) auto;
+  gap: 1.5rem;
+  align-items: end;
+  padding: 1.2rem 1.5rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+}
+
+h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.6rem); }
+h2 { margin: 0 0 0.6rem; font-size: 1rem; }
+.lead { margin: 0.35rem 0 0; color: var(--muted); }
+
+.project-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 0.8rem;
+  min-width: min(760px, 100%);
+}
+
+label { display: grid; gap: 0.3rem; font-weight: 650; font-size: 0.9rem; }
+input, select {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.65rem;
+  background: white;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: calc(100vh - 118px);
+}
+
+.toolbar {
+  padding: 1rem;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.toolbar section {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  gap: 0.65rem;
+}
+
+button, .file-button {
+  border: 0;
+  border-radius: 0.55rem;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  padding: 0.62rem 0.75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+button:hover, .file-button:hover { filter: brightness(0.94); }
+button.secondary { background: #475569; }
+button.danger { background: var(--danger); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+input[type="file"] { display: none; }
+input[type="color"] { height: 2.6rem; padding: 0.2rem; }
+.muted { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+.workspace { min-width: 0; display: grid; grid-template-rows: auto 1fr; }
+.workspace-help {
+  padding: 0.7rem 1rem;
+  background: #eff6ff;
+  border-bottom: 1px solid var(--border);
+  color: #1e3a8a;
+}
+
+.canvas-viewport {
+  overflow: auto;
+  padding: 1rem;
+}
+
+.canvas {
+  width: 1400px;
+  height: 900px;
+  position: relative;
+  background: #ffffff;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  transform-origin: top left;
+}
+
+.template-section {
+  position: absolute;
+  border: 2px solid var(--section-border);
+  background: var(--section);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.template-section h3 {
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.68);
+  border-bottom: 1px solid var(--section-border);
+}
+
+.canvas-item {
+  position: absolute;
+  min-width: 150px;
+  min-height: 90px;
+  border: 1px solid rgba(15, 23, 42, 0.28);
+  border-radius: 0.7rem;
+  padding: 0.7rem;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.13);
+  cursor: move;
+  z-index: 10;
+}
+
+.canvas-item.selected {
+  outline: 3px solid rgba(29, 78, 216, 0.55);
+  outline-offset: 2px;
+}
+
+.sticky-note { background: var(--note); }
+.link-card, .image-card { background: #ffffff; }
+.item-content {
+  min-height: 60px;
+  outline: none;
+  white-space: pre-wrap;
+  cursor: text;
+}
+.item-actions { display: flex; justify-content: flex-end; margin-bottom: 0.35rem; }
+.item-score {
+  display: inline-grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  background: #1e293b;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+.item-link { font-weight: 800; color: var(--accent); word-break: break-word; }
+.item-alt { color: var(--muted); margin: 0.4rem 0 0; font-size: 0.85rem; }
+.image-card img { display: block; max-width: 230px; max-height: 170px; border-radius: 0.45rem; }
+
+@media (max-width: 920px) {
+  .app-header, .app-shell { grid-template-columns: 1fr; }
+  .project-fields { grid-template-columns: 1fr; min-width: 0; }
+  .toolbar { border-right: 0; border-bottom: 1px solid var(--border); }
+}

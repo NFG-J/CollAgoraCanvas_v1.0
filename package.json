@@ -1,0 +1,23 @@
+{
+  "name": "collagora-canvas-v1",
+  "version": "1.0.0",
+  "description": "Local-first educational canvas tool with templates, sticky notes, voting, save/load and export.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "canvas",
+    "education",
+    "brainstorming",
+    "local-first",
+    "vanilla-javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^24.1.1"
+  }
+}

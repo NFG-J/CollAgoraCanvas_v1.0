@@ -1,0 +1,83 @@
+{
+  "templateId": "lean-canvas",
+  "title": "Lean Canvas",
+  "description": "Problem-solution-market canvas for early-stage ideas.",
+  "canvas": {
+    "width": 1800,
+    "height": 1100
+  },
+  "sections": [
+    {
+      "id": "problem",
+      "title": "Problem",
+      "x": 20,
+      "y": 20,
+      "width": 340,
+      "height": 360
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "x": 380,
+      "y": 20,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "id": "key-metrics",
+      "title": "Key metrics",
+      "x": 380,
+      "y": 210,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "id": "unique-value-proposition",
+      "title": "Unique value proposition",
+      "x": 740,
+      "y": 20,
+      "width": 340,
+      "height": 360
+    },
+    {
+      "id": "unfair-advantage",
+      "title": "Unfair advantage",
+      "x": 1100,
+      "y": 20,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "id": "channels",
+      "title": "Channels",
+      "x": 1100,
+      "y": 210,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "id": "customer-segments",
+      "title": "Customer segments",
+      "x": 1460,
+      "y": 20,
+      "width": 320,
+      "height": 360
+    },
+    {
+      "id": "cost-structure",
+      "title": "Cost structure",
+      "x": 20,
+      "y": 410,
+      "width": 860,
+      "height": 260
+    },
+    {
+      "id": "revenue-streams",
+      "title": "Revenue streams",
+      "x": 920,
+      "y": 410,
+      "width": 860,
+      "height": 260
+    }
+  ]
+}
